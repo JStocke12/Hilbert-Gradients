@@ -23,4 +23,6 @@ for i in range(len(Hilbert_Array)):
     for j in range(len(Hilbert_Array)):
         px[i,j] = (Hilbert_Array[i][j]%256, 255, 255)
 
-img.show()
+img.convert(mode='RGB').save("image.png")
+
+Image.open("image.png").show()
